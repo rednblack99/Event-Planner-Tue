@@ -1,9 +1,9 @@
 'use strict'
 
 class EventListing {
-  constructor(listing, date, time){
+  constructor(listing, date, time=''){
     this.listing = listing
-    this.date = date
+    this.date = new Date(date)
     this.time = time
   };
 
@@ -15,13 +15,13 @@ class EventListing {
     return this.date
   }
 
-  returnTime(){
-    return this.time
+  dateFormat(){
+    return this.date.toLocaleString('en-GB', { timeZone: 'UTC' });
   }
-  
-  timeStamp(){
-    return this.returnDate.getDate()  + "-" + (this.returnDate.getMonth()+1) + "-" + this.returnDate.getFullYear() + " " +
-  this.returnDate.getHours() + ":" + this.returnDate.getMinutes();
+
+  upcoming(){
+    let currentDate = new Date();
+    return this.date > currentDate ? true : false
   }
 
 };
