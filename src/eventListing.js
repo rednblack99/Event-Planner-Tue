@@ -1,10 +1,9 @@
 'use strict'
 
 class EventListing {
-  constructor(listing, date, time=''){
+  constructor(listing, date){
     this.listing = listing
     this.date = new Date(date)
-    this.time = time
   };
 
   getListing(){
