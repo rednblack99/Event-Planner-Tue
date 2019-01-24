@@ -2,7 +2,7 @@ describe('Event Board', function() {
 
   let eventBoard = new EventBoard
   
-  it('has an instance - event', function() {
+  it('has an instance - event board', function() {
     instanceOf(eventBoard, EventBoard)
   });
 

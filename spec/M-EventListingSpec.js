@@ -2,7 +2,7 @@ describe('Event Listing', function() {
 
   let event = new EventListing
   
-  it('has an instance - event', function() {
+  it('has an instance - event listing', function() {
     instanceOf(event, EventListing)
   });
 
