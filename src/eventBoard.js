@@ -15,7 +15,7 @@ class EventBoard {
   getEvents() {
     return this.events
   }
-
+ 
   clearEvents() {
     this.events = this.inStorage()
   }

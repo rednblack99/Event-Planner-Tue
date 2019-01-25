@@ -25,7 +25,32 @@
   <br>
   <button class="ClearEvents" type="button">Delete all Events</button>
   Caution, cannot be undone!
-  
+
+  <br>
+  <p> Find out the weather in a city of your choice:</p>
+  <div class="search">
+    <input type="text" placeholder="Enter City Name" id="search-txt">
+    <a id="search-btn" href="#"><i class="fas fa-search"></i></a>
+  </div>
+
+  <div class="city-icon">
+      <div class="city-icon-holder">
+      <div id="city-name"></div>
+      <img src="" alt="" id="icon">
+        </div>
+    </div>
+    
+    <div class="temperature">
+      <div id="temp"></div>
+    </div>
+    
+    <div class="humidity">
+      <div id="humidity-div"></div>
+    </div>
+
+
+  <script src="config.js"></script> 
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>  
   <script src="src/eventBoard.js"></script> 
   <script src="src/eventListing.js"></script> 
   <script src="interface.js"></script>
