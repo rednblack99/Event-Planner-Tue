@@ -25,7 +25,6 @@ window.onload = function() {
     var listingDescription = document.querySelector(".listing_description").value 
     var listingDate = document.querySelector(".listing_date").value
     eventBoard.createListing(listingDescription, listingDate)
-    // window.alert("Event added")
     events.innerHTML = eventBoard.displayEvents()
   }
 
@@ -37,7 +36,7 @@ window.onload = function() {
 
   function findWeatherDetails() {
     if (searchInput.value === "") {
-    
+
     }else {
       let searchLink = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput.value + "&appid="+appKey;
      httpRequestAsync(searchLink, theResponse);
@@ -54,15 +53,13 @@ window.onload = function() {
   
   function httpRequestAsync(url, callback)
   {
-    console.log("hello");
-      var httpRequest = new XMLHttpRequest();
-      httpRequest.onreadystatechange = () => { 
-          if (httpRequest.readyState == 4 && httpRequest.status == 200)
-              callback(httpRequest.responseText);
-      }
-      httpRequest.open("GET", url, true); // true for asynchronous 
-      httpRequest.send();
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = () => { 
+    if (httpRequest.readyState == 4 && httpRequest.status == 200)
+      callback(httpRequest.responseText);
+    }
+    httpRequest.open("GET", url, true); // true for asynchronous 
+    httpRequest.send();
   }
   
-
 }
